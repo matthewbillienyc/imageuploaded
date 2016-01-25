@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-xs-12 images">
+      <% @images.each do |img| %>
+        <div class="col-xs-4">
+          <%= img.description %><span class='right-align'><%= link_to 'X', image_path(img), method: :delete, class: 'btn btn-primary btn-xs' %></span>
+          <%= image_tag(img.image) %>
+        </div>
+      <% end %>
+  </div>
+</div>
